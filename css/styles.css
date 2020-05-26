@@ -1,0 +1,111 @@
+body {
+  font-family: Nunito+Sans;
+}
+
+#footer {
+  font-family: Nudito+Sans;
+  text-align: center;
+  background-color: black;
+  color: white;
+  position: relative;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 5%;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: Nunito+Sans;
+  font-size: 3rem;
+  padding: 3% 7% 3%;
+}
+
+h1:hover {
+  color: red;
+}
+
+h2 {
+  position: relative;
+  text-align: center;
+  font-family: Nunito+Sans;
+  font-size: 1.5rem;
+  padding: 7%;
+}
+
+.bg-light {
+  background-color: #ffffffad !important;
+  opacity: 90%;
+  color: black;
+}
+
+.navbar-light {
+  font-size: 1.7rem;
+}
+
+.nav-item {
+  font-family: Nunito+Sans;
+  font-weight: 200;
+  text-align: center;
+}
+
+.nav-item:hover {
+  font-family: Nunito+Sans;
+  font-weight: 400;
+  text-align: center;
+}
+
+.navbar-toggler-icon {
+  position: relative;
+  margin: 0 auto !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.first-section-text {
+  font-family: Nunito+Sans;
+  font-weight: 400;
+  text-align: justify;
+  justify-content: center;
+  padding: 3% 7% 3%;
+}
+
+.logo {
+  margin-bottom: 4%;
+}
+
+.logo-homepage {
+  width: 23%;
+  text-align: center;
+  padding: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.featurette {
+  padding: 15%;
+  height: auto;
+}
+
+.lead {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.card-text {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+.radio {
+  display: block;
+}
+
+.comingsoon {
+  text-align: center;
+  padding: 15%;
+  font-size: 3rem;
+}
