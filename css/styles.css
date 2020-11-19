@@ -94,6 +94,7 @@ h2 {
   padding: 15%;
   height: auto;
   width: 100%;
+      margin: 0;
 }
 
 .featurette-image
@@ -143,6 +144,7 @@ padding: 0% 7% 7% 7%;
   padding: 10px;
   margin-top: 15px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .bandcmpplayer {
@@ -253,7 +255,9 @@ padding: 0% 7% 7% 7%;
 
 /*      Just for presentation        */
 
-
+.album-releases-container{
+    margin: 50px 0 150px 0;
+}
 
 
 
