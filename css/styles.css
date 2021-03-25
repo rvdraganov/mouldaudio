@@ -1,3 +1,15 @@
+.note {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    background: #eee;
+    max-width: 400px;
+    border: 1px dotted #bbb;
+}
+
+
 body {
   font-family: Nunito+Sans;
   height: 100%;
@@ -6,10 +18,11 @@ body {
 html {
   height: 100%;
 }
-.main{
-height:auto;
-min-height: auto;
-margin-bottom: 50px;
+
+.main {
+  height: auto;
+  min-height: auto;
+  margin-bottom: 50px;
 }
 
 #footer {
@@ -37,9 +50,12 @@ h2 {
   text-align: center;
   font-family: Nunito+Sans;
   font-size: 1.5rem;
-  padding: 7%;
+padding: 30% 1% 4% 1%;
 }
-
+.releases {
+    margin-top: 30px;
+    margin-bottom: -8%;
+}
 .bg-light {
   background-color: #ffffffad !important;
   opacity: 90%;
@@ -91,17 +107,16 @@ h2 {
 }
 
 .featurette {
-  padding: 15%;
   height: auto;
   width: 100%;
-      margin: 0;
+  margin: 0;
+  padding: 5% 17% 17% 17%;
 }
 
-.featurette-image
-
-.featurette-heading{
-padding: 0% 7% 7% 7%;
+.featurette-image .featurette-heading {
+  padding: 0% 7% 7% 7%;
 }
+
 .lead {
   font-size: 1rem;
   text-align: justify;
@@ -133,7 +148,7 @@ padding: 0% 7% 7% 7%;
 }
 
 .featurette {
-  padding: 4% 17% 5% 17%;
+  padding: 5% 17% 5% 17%;
   height: auto;
 }
 
@@ -152,148 +167,162 @@ padding: 0% 7% 7% 7%;
   margin-right: 20%;
 }
 
-.bandcamp-tracks {
-  margin-top: 4%;
+#player.inline_player {
+  max-width: 100%;
 }
-.gigacalcfooter{
+
+.inline_player .initialstate .size_small .trackspecified .noartwork .buy .albumplayer {
+  max-width: 100%;
+}
+
+.album-releases-container {
+  margin: 0px 0px 227px 0;
+}
+
+.bandcamp-tracks {
+  margin-top: 10%;
+}
+
+.gigacalcfooter {
   visibility: hidden;
 }
 
-
-.eaturette-image
-
-
-.btn:hover{
-    outline: 0 !important;
+.eaturette-image .btn:hover {
+  outline: 0 !important;
 }
+
 /* entire container, keeps perspective */
 .card-container {
-	  -webkit-perspective: 800px;
-   -moz-perspective: 800px;
-     -o-perspective: 800px;
-        perspective: 800px;
-        margin-bottom: 30px;
-}
-/* flip the pane when hovered */
-.card-container:not(.manual-flip):hover .card,
-.card-container.hover.manual-flip .card{
-	-webkit-transform: rotateY( 180deg );
--moz-transform: rotateY( 180deg );
- -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  margin-bottom: 30px;
 }
 
+/* flip the pane when hovered */
+.card-container:not(.manual-flip):hover .card,
+.card-container.hover.manual-flip .card {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
 
 .card-container.static:hover .card,
 .card-container.static.hover .card {
-	-webkit-transform: none;
--moz-transform: none;
- -o-transform: none;
-    transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  transform: none;
 }
+
 /* flip speed goes here */
 .card {
-	 -webkit-transition: -webkit-transform 1.5s;
-   -moz-transition: -moz-transform 1.5s;
-     -o-transition: -o-transform 1.5s;
-        transition: transform 1.5s;
--webkit-transform-style: preserve-3d;
-   -moz-transform-style: preserve-3d;
-     -o-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-	position: relative;
+  -webkit-transition: -webkit-transform 1.5s;
+  -moz-transition: -moz-transform 1.5s;
+  -o-transition: -o-transform 1.5s;
+  transition: transform 1.5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
-	-webkit-backface-visibility: hidden;
-   -moz-backface-visibility: hidden;
-     -o-backface-visibility: hidden;
-        backface-visibility: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
-
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* front pane, placed above back */
 .front {
-	z-index: 2;
+  z-index: 2;
 }
 
 /* back, initially hidden pane */
 .back {
-		-webkit-transform: rotateY( 180deg );
-   -moz-transform: rotateY( 180deg );
-     -o-transform: rotateY( 180deg );
-        transform: rotateY( 180deg );
-        z-index: 3;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 3;
 }
 
-.back .btn-simple{
-    position: absolute;
-    left: 0;
-    bottom: 4px;
+.back .btn-simple {
+  position: absolute;
+  left: 0;
+  bottom: 4px;
 }
+
 /*        Style       */
-
-
-.card{
-    background: none repeat scroll 0 0 #FFFFFF;
-    border-radius: 0px;
-    border-style: hidden;
-
+.card {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-radius: 0px;
+  border-style: hidden;
 }
+
 .card-container, .front, .back {
-	width: 100%;
-	height: 100%;
-	border-radius: 0
-  border
+  width: 100%;
+  height: 100%;
+  border-radius: 0 border
 }
-
-
 
 /*      Just for presentation        */
-
-.album-releases-container{
-    margin: 50px 0 150px 0;
+.album-releases-container {
+  margin: 50px 0 150px 0;
 }
 
-
-
-.album-image-releases{
+.album-image-releases {
   width: 100%;
-    height: 100%;
+  height: 100%;
 }
 
-
-
-
-
-
-
-
-
-
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, 15%);
+}
 
 /*       Fix bug for IE      */
-
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .front, .back{
-        -ms-backface-visibility: visible;
-        backface-visibility: visible;
-    }
+  .front, .back {
+    -ms-backface-visibility: visible;
+    backface-visibility: visible;
+  }
 
-    .back {
-        visibility: hidden;
-        -ms-transition: all 0.2s cubic-bezier(.92,.01,.83,.67);
-    }
-    .front{
-        z-index: 4;
-    }
-    .card-container:not(.manual-flip):hover .back,
-    .card-container.manual-flip.hover .back{
-        z-index: 5;
-        visibility: visible;
-    }
+  .back {
+    visibility: hidden;
+    -ms-transition: all 0.2s cubic-bezier(.92, .01, .83, .67);
+  }
+
+  .front {
+    z-index: 4;
+  }
+
+  .card-container:not(.manual-flip):hover .back,
+  .card-container.manual-flip.hover .back {
+    z-index: 5;
+    visibility: visible;
+  }
+}
+
+.ytp-watermark {
+  visibility: hidden;
+}
+
+.ytp-embed:not(.ad-showing) .ytp-title-text {
+  padding-top: 21px;
+  visibility: hidden;
 }
